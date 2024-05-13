@@ -1,0 +1,21 @@
+{
+  "name": "mdf",
+  "version": "1.0.0",
+  "description": "小雨的学习文档及相关记录",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "author": "RAIN",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-rc.9",
+    "@vuepress/plugin-copy-code": "^2.0.0-rc.28",
+    "@vuepress/plugin-docsearch": "^2.0.0-rc.28",
+    "@vuepress/plugin-git": "^2.0.0-rc.22",
+    "@vuepress/plugin-search": "^2.0.0-rc.28",
+    "@vuepress/theme-default": "^2.0.0-rc.28",
+    "vuepress": "^2.0.0-rc.9"
+  }
+}
