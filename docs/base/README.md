@@ -1,23 +1,29 @@
 # 前言
 
-## 为什么需要打包工具？
+## 前端基础技术栈
 
-开发时，我们会使用框架（React、Vue），ES6 模块化语法，Less/Sass 等 css 预处理器等语法进行开发。
+- HTML5 / CSS3 / JS / TS
+- less / sass / postcss
+- axios
+- Vue / React
+- Vuex / Pinia / Redux
+- MUI / ElementPlus / Ant Design
+- Webpack / Vite
+- Git 
+- Java / Node
+- canvas / SVG / D3 / three.js / Echarts
+- Springboot / Express / Koa
+- ……
 
-这样的代码要想在浏览器运行必须经过编译成浏览器能识别的 JS、Css 等语法，才能运行。
 
-所以我们需要打包工具帮我们做完这些事。
+## 深入了解
 
-除此之外，打包工具还能压缩代码、做兼容性处理、提升代码性能等。
+- 浏览器原理、缓存机制
+- 前端SPA应用性能优化、首屏优化
+- 网络原理、安全对策
+- 框架、插件、第三方库底层原理
+- 小程序、混合、原生、桌面应用开发
+- 项目自动化部署CI/CD
+- ……
 
-## 有哪些打包工具？
-
-- Grunt
-- Gulp
-- Parcel
-- Webpack
-- Rollup
-- Vite
-- ...
-
-目前市面上最流量的是 Webpack，所以我们主要以 Webpack 来介绍使用打包工具
+学习还得继续进行下去……

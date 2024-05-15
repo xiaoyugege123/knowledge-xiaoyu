@@ -4,6 +4,7 @@ import { defineUserConfig } from "vuepress";
 import { copyCodePlugin } from "@vuepress/plugin-copy-code";
 import { searchPlugin } from "@vuepress/plugin-search";
 import { gitPlugin } from '@vuepress/plugin-git'
+import { readingTimePlugin } from '@vuepress/plugin-reading-time'
 
 export default defineUserConfig({
   bundler: viteBundler(),
@@ -19,7 +20,6 @@ export default defineUserConfig({
       },
       {
         text: "数据结构与算法",
-        link: "/algorithm/",
         children: [
           {text:'介绍',link:"/algorithm/README.md"},
           {text:"手撕数据结构",link:"/algorithm/手撕数据结构.md"},
@@ -47,7 +47,16 @@ export default defineUserConfig({
       },
       {
         text: "计算机基础",
-        link: "/computer/",
+        children:[
+          {text:"介绍",link:"/computer/README.md"},
+          "/computer/计算机网络.md",
+          "/computer/Web应用安全.md",
+          "/computer/设计模式.md",
+          "/computer/Linux.md",
+          "/computer/数据库.md",
+          "/computer/操作系统_编译原理.md",
+          "/computer/软件工程.md",
+        ]
       },
       {
         text: "前端进阶",
@@ -59,7 +68,7 @@ export default defineUserConfig({
       },
       {
         text: "面试",
-        link: "/origin/",
+        link: "/interview/",
       },
     ],
     sidebar: {
@@ -80,22 +89,8 @@ export default defineUserConfig({
           text: "前端基础学习",
           children: [
             "/base/README.md",
-            "/base/base.md",
-            "/base/config.md",
-            "/base/development.md",
-            "/base/css.md",
-            "/base/image.md",
-            "/base/output.md",
-            "/base/clean.md",
-            "/base/font.md",
-            "/base/other.md",
-            "/base/javascript.md",
-            "/base/html.md",
-            "/base/server.md",
-            "/base/production.md",
-            "/base/optimizeCss.md",
-            "/base/minifyHtml.md",
-            "/base/summary.md",
+            "/base/JS模块化历程.md",
+            "/base/AJAX.md"
           ],
         },
       ],
@@ -127,24 +122,42 @@ export default defineUserConfig({
           ],
         },
       ],
-      "/origin/": [
+      "/interview/": [
         {
           text: "面试",
           children: [
-            "/origin/README.md",
-            "/origin/loader.md",
-            "/origin/plugin.md",
-            "/origin/summary.md",
+            "/interview/README.md",
+            "/interview/other.md",
+            "/interview/CSRF.md",
+            "/interview/coding.md",
+            "/interview/codingStyle.md",
+            "/interview/codeReview.md",
+            "/interview/statusCode.md",
           ],
         },
       ],
+      "/computer/":[
+        {
+          text:"计算机基础",
+          children:[
+            "/computer/README.md",
+            "/computer/计算机网络.md",
+            "/computer/Web应用安全.md",
+            "/computer/设计模式.md",
+            "/computer/Linux.md",
+            "/computer/数据库.md",
+            "/computer/操作系统_编译原理.md",
+            "/computer/软件工程.md",
+          ]
+        }
+      ]
     },
   }),
   lang:"zh-CN",
   title: "🍰 小雨的学习记录",
   description:
     "在互联网的广阔天地，深知技术日新月异，不进则退，对前端开发的热爱，源于对生活持续学习、不断进步的态度",
-  base: "/knowledge-xiaoyu/",
+  base: "/",
   head: [
     ["link", { rel: "icon", type: "image/x-icon", href: "/imgs/favicon.ico" }],
   ],
@@ -162,6 +175,13 @@ export default defineUserConfig({
     }),
     gitPlugin({
       // 配置项
+      createdTime: true,
+      updatedTime: true,
+      contributors:true,
+    }),
+    readingTimePlugin({
+      // 配置项
+      wordPerMinute:300
     }),
   ],
 });
