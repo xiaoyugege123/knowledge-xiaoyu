@@ -55,7 +55,12 @@ export default defineUserConfig({
           "/computer/Linux.md",
           "/computer/数据库.md",
           "/computer/操作系统_编译原理.md",
-          "/computer/软件工程.md",
+          {
+            text:"软件工程",
+            children:[
+              {text:"Git",link:"/computer/Git.md"}
+            ]
+          },
         ]
       },
       {
@@ -90,7 +95,9 @@ export default defineUserConfig({
           children: [
             "/base/README.md",
             "/base/JS模块化历程.md",
-            "/base/AJAX.md"
+            "/base/AJAX.md",
+            "/base/手写题.md",
+            "/base/哦！又学到了！.md",
           ],
         },
       ],
@@ -147,7 +154,17 @@ export default defineUserConfig({
             "/computer/Linux.md",
             "/computer/数据库.md",
             "/computer/操作系统_编译原理.md",
-            "/computer/软件工程.md",
+            "/computer/Git.md",
+          ]
+        }
+      ],
+      "/advance/":[
+        {
+          text:"前端进阶",
+          children:[
+            "/advance/README.md",
+            "/advance/前端路由的实现原理.md",
+            "/advance/数据代理Proxy.md"
           ]
         }
       ]

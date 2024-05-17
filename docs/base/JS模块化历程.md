@@ -1,6 +1,6 @@
 # JS 模块化历程
 
-![JS模块化.png](http://picture.gptkong.com/20240515/195344c7ec97934b889280bfe930634e22.png)
+![JS模块化.png](https://img2.imgtp.com/2024/05/15/C4NfZ8qc.png)
 
 
 ## 模块化的历程

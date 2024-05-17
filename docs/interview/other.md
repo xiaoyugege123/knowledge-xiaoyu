@@ -73,7 +73,7 @@
 | post      | ×       | ×   |请求服务器接受所指定的文档作为对所标识的URI的新的从属实体 |
 
 
-![method.png](http://picture.gptkong.com/20240515/2124de21be4b4b4a11b8f2505b3d75cb60.png)
+![method.png](https://img2.imgtp.com/2024/05/15/P4wc3i04.png)
 **POST和GET谁更安全?**
 
 **get更安全**

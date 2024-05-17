@@ -28,7 +28,7 @@
 
  计算机相关专业出来的，大学四年数据结构与算法都学不好，有什么能拿出来的呢，我是这样的想法。
 ## 开始系统学算法+日常刷题
-![leetcode.png](http://picture.gptkong.com/20240515/1955259877f01f4270bf4155ab0b213513.png)
+![leetcode.png](https://img2.imgtp.com/2024/05/15/iTXbymsd.png)
 
 我的学习路径：
 - 首先就是了解基础的数据结构，用自己擅长的语言手写数据结构
