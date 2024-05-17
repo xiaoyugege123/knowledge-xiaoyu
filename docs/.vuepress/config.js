@@ -164,7 +164,9 @@ export default defineUserConfig({
           children:[
             "/advance/README.md",
             "/advance/前端路由的实现原理.md",
-            "/advance/数据代理Proxy.md"
+            "/advance/数据代理Proxy.md",
+            "/advance/前端性能优化.md",
+            "/advance/Performance.md",
           ]
         }
       ]
