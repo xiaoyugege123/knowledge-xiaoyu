@@ -98,6 +98,7 @@ export default defineUserConfig({
             "/base/AJAX.md",
             "/base/手写题.md",
             "/base/哦！又学到了！.md",
+            "/base/CSS3.md",
           ],
         },
       ],

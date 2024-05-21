@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CSS Grid starting point</title>
+    <style>
+        body {
+            width: 90%;
+            max-width: 900px;
+            margin: 2em auto;
+            font: .9em/1.2 Arial, Helvetica, sans-serif;
+        }
+
+        .container > div {
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgb(207,232,220);
+            border: 2px solid rgb(79,185,227);
+        }
+        /* 补充 */
+        .container {
+            display: grid;
+            /* 加三个宽度为200px的列。 */
+            grid-template-columns: 200px 200px 200px ;
+            /* 除了长度和百分比，我们也可以用fr这个单位来灵活地定义网格的行与列的大小。
+            fr这个单位表示了可用空间的一个比例 */
+            grid-template-columns: 2fr 1fr 1fr;
+            /* 使用 grid-column-gap (en-US) 属性来定义列间隙；使用 grid-row-gap (en-US) 来定义行间隙；
+            使用 grid-gap (en-US) 可以同时设定两者。
+            ！！！！注意：间隙距离可以用任何长度单位包括百分比来表示，但不能使用fr单位 */
+            grid-gap: 20px 10px;/* 行 列 */
+            gap: 20px 10px;/* 两个一样 */
+            /* 使用repeat来重复构建具有某些宽度配置的某些列
+           repeat(3, 1fr):得到了 3 个1fr的列 
+           repeat(2, 2fr 1fr): 相当于填入了2fr 1fr 2fr 1fr*/
+            grid-template-columns: repeat(3, 1fr);
+            /* 隐式网格中生成的行/列大小是参数默认是auto，大小会根据放入的内容自动调整。
+            当然，你也可以使用grid-auto-rows和grid-auto-columns属性手动设定隐式网格的大小。
+            下面的例子将grid-auto-rows设为了100px，然后你可以看到那些隐式网格中的行
+            （因为这个例子里没有设定grid-template-rows，因此，所有行都位于隐式网格内）现在都是 100 像素高了。
+            简单来说，隐式网格就是为了放显式网格放不下的元素，浏览器根据已经定义的显式网格自动生成的网格部分。 */
+            grid-auto-rows: 100px;
+            /* minmax 函数为一个行/列的尺寸设置了取值范围。比如设定为 minmax(100px, auto)，那么尺寸就至少为 100 像素，
+            并且如果内容尺寸大于 100 像素则会根据内容自动调整。 */
+            grid-auto-rows: minmax(100px,auto);
+            /* 
+            自动使用多列填充
+              grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            */
+        }
+    </style>
+  </head>
+
+<body>
+    <h1>Simple grid example</h1>
+    <div class="container">
+        <div>就能(´ڡ`ლ)好吃的.∑(っ°Д°;)っ卧槽，不见了</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloribus error animi eius labore rerum quo saepe nihil veritatis! Necessitatibus, similique facere? Voluptatem eos consequatur tempora non alias. Repudiandae, nihil!</div>
+        <div>Five</div>
+        <div>Six</div>
+        <div>Seven Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur blanditiis exercitationem eos veritatis officia, enim dolores nostrum minima iure, repellat eius, similique suscipit dolorem eaque? Porro dolores quidem consequuntur facilis!</div>
+    </div>
+</body>
+</html>
