@@ -99,6 +99,7 @@ export default defineUserConfig({
             "/base/手写题.md",
             "/base/哦！又学到了！.md",
             "/base/CSS3.md",
+            "/base/正则表达式.md",
           ],
         },
       ],
