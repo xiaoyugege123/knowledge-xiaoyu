@@ -225,6 +225,13 @@ xhr.open("GET", "/bar/foo.txt", true); //异步，默认
 xhr.open("GET", "http://www.mozilla.org/", false); //同步
 ```
 
+注意：当您使用 async=false 时，请不要编写 onreadystatechange 函数 - 把代码放到 send() 语句后面即可：
+```js
+xmlhttp.open("GET","/try/ajax/ajax_info.txt",false);
+xmlhttp.send();
+document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+```
+
 备注： 从 Gecko 30.0，Blink 39.0 和 Edge 13 开始，主线程上的同步请求由于对用户体验的负面影响而被弃用。同步 XHR 不允许所有新的 XHR 功能（如 timeout 或 abort）。这样做会调用 InvalidAccessError。
 
 ## fetch
