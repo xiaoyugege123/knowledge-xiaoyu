@@ -170,6 +170,8 @@ export default defineUserConfig({
             "/advance/前端性能优化.md",
             "/advance/Performance.md",
             "/advance/Webpack打包原理.md",
+            "/advance/浏览器缓存.md",
+            "/advance/中间件.md",
           ]
         }
       ]
