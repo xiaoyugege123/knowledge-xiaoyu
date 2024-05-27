@@ -1,6 +1,7 @@
 # Git
 
-[常用 Git 命令清单](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+[常用 Git 命令清单](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)<br>
+[git rebase与git merge图文详解](https://blog.csdn.net/weixin_45565886/article/details/133798840)
 
 ## Git合作开发场景
 
@@ -32,4 +33,5 @@
 2、git commit -m '修改问题'
 3、git stash pop：将代码追加到最新的提交之后
 ```
+
 

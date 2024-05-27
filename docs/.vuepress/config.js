@@ -33,7 +33,8 @@ export default defineUserConfig({
               {text:"技巧_数学🍌",link:"/algorithm/技巧_数学🍌.md"},
               {text:"矩阵🍇",link:"/algorithm/矩阵🍇.md"},
               {text:"栈_堆🍊",link:"/algorithm/栈_堆🍊.md"},
-              {text:"贪心🍉",link:"/algorithm/贪心🍉.md"}
+              {text:"贪心🍉",link:"/algorithm/贪心🍉.md"},
+              {text:"回溯算法🌽",link:"/algorithm/回溯算法🌽.md"}
             ]
           },
           {
@@ -100,6 +101,7 @@ export default defineUserConfig({
             "/base/哦！又学到了！.md",
             "/base/CSS3.md",
             "/base/正则表达式.md",
+            "/base/继承.md",
           ],
         },
       ],
@@ -117,6 +119,7 @@ export default defineUserConfig({
             "/algorithm/矩阵🍇.md",
             "/algorithm/贪心🍉.md",
             "/algorithm/栈_堆🍊.md",
+            "/algorithm/回溯算法🌽.md",
           ],
         },
       ],
@@ -136,6 +139,7 @@ export default defineUserConfig({
           text: "面试",
           children: [
             "/interview/README.md",
+            "/interview/interview.md",
             "/interview/other.md",
             "/interview/CSRF.md",
             "/interview/coding.md",
