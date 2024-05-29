@@ -180,3 +180,131 @@ console.log("-------------------------");
 </body>
 </html>
 ```
+## hanlder对象方法
+### handler.get()
+方法用于拦截对象的读取属性操作。
+```js
+var p = new Proxy(
+  {},
+  {
+    get: function (target, prop, receiver) {
+      console.log("called: " + prop);
+      return 10;
+    },
+  },
+);
+
+console.log(p.a); // "called: a"; ouptut 10
+```
+### handler.set()
+方法是设置属性值操作的捕获器。
+```js
+var p = new Proxy(
+  {},
+  {
+    set: function (target, prop, value, receiver) {
+      target[prop] = value;
+      console.log("property set: " + prop + " = " + value);
+      return true;
+    },
+  },
+);
+
+console.log("a" in p); // false
+
+p.a = 10; // "property set: a = 10"
+console.log("a" in p); // true
+console.log(p.a); // 10
+```
+### handler.apply()
+方法用于拦截函数的调用。
+```js
+function sum(a, b) {
+  return a + b;
+}
+
+const handler = {
+  apply: function (target, thisArg, argumentsList) {
+    console.log(`Calculate sum: ${argumentsList}`);
+    // Expected output: "Calculate sum: 1,2"
+
+    return target(argumentsList[0], argumentsList[1]) * 10;
+  },
+};
+
+const proxy1 = new Proxy(sum, handler);
+
+console.log(sum(1, 2));
+// Expected output: 3
+console.log(proxy1(1, 2));
+// Expected output: 30
+```
+### handler.construct()
+方法用于拦截 new 操作符。为了使 new 操作符在生成的 Proxy 对象上生效，用于初始化代理的目标对象自身必须具有 [[Construct]] 内部方法（即 new target 必须是有效的）。
+```js
+function monster1(disposition) {
+  this.disposition = disposition;
+}
+//下面这个也是行的。
+class monster2{
+    constructor(disposition){
+        this.disposition=disposition
+    }
+}
+
+const handler1 = {
+  construct(target, args) {
+    console.log(`Creating a ${target.name}`);
+    // Expected output: "Creating a monster1"
+
+    return new target(...args);
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(new proxy1('fierce').disposition);
+// Expected output: "fierce"
+```
+### handler.has()
+方法是针对 in 操作符的代理方法。
+```js
+const handler1 = {
+  has(target, key) {
+    if (key[0] === '_') {
+      return false;
+    }
+    return key in target;
+  },
+};
+
+const monster1 = {
+  _secret: 'easily scared',
+  eyeCount: 4,
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+console.log('eyeCount' in proxy1);
+// Expected output: true
+
+console.log('_secret' in proxy1);
+// Expected output: false
+
+console.log('_secret' in monster1);
+// Expected output: true
+```
+### handler.deleteProperty()
+方法用于拦截对对象属性的 delete 操作。
+```js
+var p = new Proxy(
+  {},
+  {
+    deleteProperty: function (target, prop) {
+      console.log("called: " + prop);
+      return true;
+    },
+  },
+);
+
+delete p.a; // "called: a"
+```

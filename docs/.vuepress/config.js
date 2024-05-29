@@ -102,6 +102,7 @@ export default defineUserConfig({
             "/base/CSS3.md",
             "/base/正则表达式.md",
             "/base/继承.md",
+            "/base/拖拽.md",
           ],
         },
       ],
