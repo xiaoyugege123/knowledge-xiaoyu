@@ -177,6 +177,8 @@ export default defineUserConfig({
             "/advance/Webpack打包原理.md",
             "/advance/浏览器缓存.md",
             "/advance/中间件.md",
+            "/advance/别想调试我的前端页面代码!.md",
+            "/advance/花里胡哨的console.log.md",
           ]
         }
       ]

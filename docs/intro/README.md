@@ -1,10 +1,12 @@
 
 # 学习路线
 
-![前端学习.png](https://img2.imgtp.com/2024/05/15/O7QUOvJO.png)
+![前端学习.png](/imgs/前端学习.png)
 
 这里还有一些相关的学习路线，这个网站提供的挺好的！
 [前端学习路线](https://roadmap.sh/frontend)
+
+[前端技术总结](https://juejin.cn/post/7318561797451939881)
 
 **学习方法**
 
