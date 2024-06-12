@@ -179,6 +179,8 @@ export default defineUserConfig({
             "/advance/中间件.md",
             "/advance/别想调试我的前端页面代码!.md",
             "/advance/花里胡哨的console.log.md",
+            "/advance/前端如何防止接口重复提交.md",
+            "/advance/消息推送技术.md",
           ]
         }
       ]
