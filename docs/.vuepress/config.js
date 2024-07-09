@@ -181,6 +181,8 @@ export default defineUserConfig({
             "/advance/花里胡哨的console.log.md",
             "/advance/前端如何防止接口重复提交.md",
             "/advance/消息推送技术.md",
+            "/advance/事件循环.md",
+            "/advance/浏览器渲染原理.md",
           ]
         }
       ]
@@ -218,3 +220,4 @@ export default defineUserConfig({
     }),
   ],
 });
+  

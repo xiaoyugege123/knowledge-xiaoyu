@@ -1,7 +1,8 @@
 # Git
 
 [常用 Git 命令清单](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)<br>
-[git rebase与git merge图文详解](https://blog.csdn.net/weixin_45565886/article/details/133798840)
+[git rebase与git merge图文详解](https://blog.csdn.net/weixin_45565886/article/details/133798840)<br>
+[Git之GitFlow工作流 | Gitflow Workflow](https://blog.csdn.net/sunyctf/article/details/130587970)
 
 ## Git合作开发场景
 

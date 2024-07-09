@@ -1,5 +1,5 @@
 # 进行打包输出
-npm run docs:build
+call npm run docs:build
 
 cd docs/.vuepress/dist
 
@@ -7,6 +7,6 @@ git init
 git remote add origin https://github.com/xiaoyugege123/xiaoyugege123.github.io.git
 git branch -M main
 git add .
-git commit -m ""
+git commit -m "xiaoyu"
 
 git push -f origin main
