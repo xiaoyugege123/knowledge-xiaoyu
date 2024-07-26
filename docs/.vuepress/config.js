@@ -183,6 +183,7 @@ export default defineUserConfig({
             "/advance/消息推送技术.md",
             "/advance/事件循环.md",
             "/advance/浏览器渲染原理.md",
+            "/advance/浏览器的同源策略.md",
           ]
         }
       ]
