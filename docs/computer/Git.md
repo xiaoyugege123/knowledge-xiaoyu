@@ -4,6 +4,20 @@
 [git rebase与git merge图文详解](https://blog.csdn.net/weixin_45565886/article/details/133798840)<br>
 [Git之GitFlow工作流 | Gitflow Workflow](https://blog.csdn.net/sunyctf/article/details/130587970)
 
+## Git常用场景
+**配置相关**
+```bash
+# 配置全局/局部的名字和邮箱，为了提交。
+git config --global user.name "xiaoyu"
+git config --global user.email "****@qq.com"
+
+git config user.name "*****"
+git config user.email "*****"
+
+# 查看配置信息
+git config list
+```
+
 ## Git合作开发场景
 
 **使用 stash 的一个场景**
@@ -35,4 +49,39 @@
 3、git stash pop：将代码追加到最新的提交之后
 ```
 
+## Git特殊使用场景
+> 因为担心自己的代码会被其他人看到，有些问题，或者说自己看着自己做的git操作，给后来的自己整无语了，想进行相关的修缮操作。
 
+**篡改提交记录**
+
+单条记录修改
+
+Git提供了amend命令，可以用来修改最新的提交记录。`注意，这个命令只会修改最近一次的提交`，它能实现以下的功能：
+
+- 修改提交信息
+- 添加漏掉的文件到上一次的提交中
+- 修改之前提交的文件
+```bash
+# 替换用户名、邮箱信息
+git commit --amend --author="{username} <{email}>" --no-edit
+# 如果已经修改了仓库的用户信息，直接执行命令重置
+git commit --amend --reset-author --no-edit
+```
+
+批量修改
+
+Git官网提供了很多种修改提交记录信息的方法，这里主要介绍下filter-branch，它可以通过脚本的方式批量修改历史提交记录信息。
+
+filter-branch 它能实现如下的功能，正好符合我们要批量修改历史提交记录中用户、邮箱的需求。
+
+```bash
+git filter-branch --commit-filter '
+        if [ "$GIT_AUTHOR_NAME" = "xiaofu" ];
+        then
+                GIT_AUTHOR_NAME="程序员小富";
+                GIT_AUTHOR_EMAIL="515361725@qq.com";
+                git commit-tree "$@";
+        else
+                git commit-tree "$@";
+        fi' HEAD
+```

@@ -59,7 +59,8 @@ export default defineUserConfig({
           {
             text:"软件工程",
             children:[
-              {text:"Git",link:"/computer/Git.md"}
+              {text:"Git",link:"/computer/Git.md"},
+              {text:"NGINX",link:"/computer/NGINX.md"}
             ]
           },
         ]
@@ -134,6 +135,12 @@ export default defineUserConfig({
             "/project/summary.md",
           ],
         },
+        {
+          text: "实习",
+          children: [
+            "/project/internship/数据安全.md",
+          ],
+        },
       ],
       "/interview/": [
         {
@@ -162,6 +169,7 @@ export default defineUserConfig({
             "/computer/数据库.md",
             "/computer/操作系统_编译原理.md",
             "/computer/Git.md",
+            "/computer/NGINX.md",
           ]
         }
       ],
@@ -184,6 +192,7 @@ export default defineUserConfig({
             "/advance/事件循环.md",
             "/advance/浏览器渲染原理.md",
             "/advance/浏览器的同源策略.md",
+            "/advance/前端工程化流程.md",
           ]
         }
       ]
