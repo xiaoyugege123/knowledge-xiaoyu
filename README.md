@@ -15,3 +15,5 @@ git commit -m "xiaoyu"
 
 git push -f origin main
 ```
+
+### 前端错误捕获和上报
