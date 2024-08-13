@@ -132,9 +132,7 @@ export default defineUserConfig({
           text: "项目",
           children: [
             "/project/README.md",
-            "/project/react-cli.md",
-            "/project/vue-cli.md",
-            "/project/summary.md",
+            "/project/文件预览.md",
           ],
         },
         {
