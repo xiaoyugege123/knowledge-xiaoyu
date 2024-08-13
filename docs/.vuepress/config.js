@@ -27,6 +27,7 @@ export default defineUserConfig({
             text:"LeetCode算法题",
             children:[
               {text:"二叉树🍈",link:"/algorithm/二叉树🍈.md"},
+              {text:"链表🍜",link:"/algorithm/链表🍜🍈.md"},
               {text:"双指针_滑动窗口🍨",link:"/algorithm/双指针_滑动窗口🍨.md"},
               {text:"二分查找🍰",link:"/algorithm/二分查找🍰.md"},
               {text:"动态规划🍓",link:"/algorithm/动态规划🍓.md"},
@@ -114,6 +115,7 @@ export default defineUserConfig({
             "/algorithm/README.md",
             "/algorithm/手撕数据结构.md",
             "/algorithm/二叉树🍈.md",
+            "/algorithm/链表🍜.md",
             "/algorithm/双指针_滑动窗口🍨.md",
             "/algorithm/二分查找🍰.md",
             "/algorithm/动态规划🍓.md",
