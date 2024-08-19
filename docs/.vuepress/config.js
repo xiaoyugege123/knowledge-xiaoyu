@@ -105,6 +105,7 @@ export default defineUserConfig({
             "/base/正则表达式.md",
             "/base/继承.md",
             "/base/拖拽.md",
+            "/base/web前端开发-实用的JS技巧-杨小爱系列.md",
           ],
         },
       ],
@@ -133,6 +134,7 @@ export default defineUserConfig({
           children: [
             "/project/README.md",
             "/project/文件预览.md",
+            "/project/H5开发.md",
           ],
         },
         {

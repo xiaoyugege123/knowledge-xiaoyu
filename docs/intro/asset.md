@@ -7,9 +7,10 @@
     - [菜鸟教程](https://www.runoob.com/)
     - [阮一峰老师的文章](https://www.ruanyifeng.com/)
     - [MDN](https://developer.mozilla.org/zh-CN/)
-    - [前端知识点汇总](https://www.yuque.com/baiyueguang-rfnbu/tr4d0i)
+    - [前端知识点汇总--语雀文档](https://www.yuque.com/baiyueguang-rfnbu/tr4d0i)
     - [Web 前端开发网站](http://www.webqdkf.com/)
     - 稀土掘金、微信公众号推文
+    - [奇文共欣赏，疑义相与析](https://github.com/jawil/blog/issues/6 )
 
 ### 深入学习
 

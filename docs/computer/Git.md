@@ -1,13 +1,15 @@
 # Git
 
 [常用 Git 命令清单](https://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)<br>
-[git rebase与git merge图文详解](https://blog.csdn.net/weixin_45565886/article/details/133798840)<br>
-[Git之GitFlow工作流 | Gitflow Workflow](https://blog.csdn.net/sunyctf/article/details/130587970) <br>
-[Git中的三种后悔药](https://www.cnblogs.com/liuyuelinfighting/p/16788088.html)<br>
-[Git中的三种后悔药 二](https://www.cnblogs.com/liuyuelinfighting/p/16790887.html)
+[git rebase 与 git merge 图文详解](https://blog.csdn.net/weixin_45565886/article/details/133798840)<br>
+[Git 之 GitFlow 工作流 | Gitflow Workflow](https://blog.csdn.net/sunyctf/article/details/130587970) <br>
+[Git 中的三种后悔药](https://www.cnblogs.com/liuyuelinfighting/p/16788088.html)<br>
+[Git 中的三种后悔药 二](https://www.cnblogs.com/liuyuelinfighting/p/16790887.html)
 
-## Git常用场景
+## Git 常用场景
+
 **配置相关**
+
 ```bash
 # 配置全局/局部的名字和邮箱，为了提交。
 git config --global user.name "xiaoyu"
@@ -20,9 +22,10 @@ git config user.email "*****"
 git config list
 ```
 
-## Git合作开发场景
+## Git 合作开发场景
 
 **使用 stash 的一个场景**
+
 ```:no-line-numbers
 问题场景:
 甲和乙同时修改master分支代码。
@@ -40,6 +43,7 @@ git config list
 ```
 
 **使用 stash 的另一个场景**
+
 ```:no-line-numbers
 问题场景:
 甲同学在自己的分支上开发进行一半了。
@@ -51,18 +55,56 @@ git config list
 3、git stash pop：将代码追加到最新的提交之后
 ```
 
-## Git特殊使用场景
-> 因为担心自己的代码会被其他人看到，有些问题，或者说自己看着自己做的git操作，给后来的自己整无语了，想进行相关的修缮操作。
+**切换远程仓库**
+
+```bash
+git remote -v # 查看当前远程仓库地址
+git remote set-url origin <new url> # 修改远程地址为新的地址 <new url> 改为新的地址
+
+# git remote show origin # 再次查看当前仓库远程地址 确认是否发生改变
+```
+
+**切换远程分支**
+
+```
+1.  查看远程所有分支
+
+git branch -a
+
+如：
+
+* dev
+
+  master
+
+  remotes/origin/HEAD -> origin/master
+
+  remotes/origin/master
+
+  remotes/origin/release/caigou_v1.0
+
+2.  本机新建分支并切换到指定分支（指定的远程分支）
+
+  git checkout -b dev origin/release/caigou_v1.0
+
+该命令可以将远程git仓库里的指定分支拉取到本地，这样就在本地新建了一个dev分支，
+并和指定的远程分支release/caigou_v1.0关联了起来。
+```
+
+## Git 特殊使用场景
+
+> 因为担心自己的代码会被其他人看到，有些问题，或者说自己看着自己做的 git 操作，给后来的自己整无语了，想进行相关的修缮操作。
 
 **篡改提交记录**
 
 单条记录修改
 
-Git提供了amend命令，可以用来修改最新的提交记录。`注意，这个命令只会修改最近一次的提交`，它能实现以下的功能：
+Git 提供了 amend 命令，可以用来修改最新的提交记录。`注意，这个命令只会修改最近一次的提交`，它能实现以下的功能：
 
 - 修改提交信息
 - 添加漏掉的文件到上一次的提交中
 - 修改之前提交的文件
+
 ```bash
 # 替换用户名、邮箱信息
 git commit --amend --author="{username} <{email}>" --no-edit
@@ -72,7 +114,7 @@ git commit --amend --reset-author --no-edit
 
 批量修改
 
-Git官网提供了很多种修改提交记录信息的方法，这里主要介绍下filter-branch，它可以通过脚本的方式批量修改历史提交记录信息。
+Git 官网提供了很多种修改提交记录信息的方法，这里主要介绍下 filter-branch，它可以通过脚本的方式批量修改历史提交记录信息。
 
 filter-branch 它能实现如下的功能，正好符合我们要批量修改历史提交记录中用户、邮箱的需求。
 
@@ -86,4 +128,26 @@ git filter-branch --commit-filter '
         else
                 git commit-tree "$@";
         fi' HEAD
+```
+下面相当于在重写.git文件夹
+```
+PS D:\web前端工程\WebDemo\React\happy-buy> git filter-branch --commit-filter '
+>>         if [ "$GIT_AUTHOR_NAME" = "xiaoyugege123" ];  
+>>         then
+>>                 GIT_AUTHOR_NAME="xiaoyu";    
+>>                 GIT_AUTHOR_EMAIL="luoyu2003@outlook.com";
+>>                 git commit-tree "$@";
+>>         else
+>>                 git commit-tree "$@";
+>>         fi' HEAD
+$@"\x3b\x0a        else\x0a                git commit-tree "$@"\x3b\x0a        fi' HEAD;a6c62303-8523-46d7-a161-ece3222db78dWARNING: git-filter-branch has a glut of gotchas generating mangled history  
+         rewrites.  Hit Ctrl-C before proceeding to abort, then use an       
+         alternative filtering tool such as 'git filter-repo'
+         (https://github.com/newren/git-filter-repo/) instead.  See the      
+         filter-branch manual page for more details; to squelch this warning,
+         set FILTER_BRANCH_SQUELCH_WARNING=1.
+Proceeding with filter-branch...
+
+Rewrite 1159a0efac5311581fc69968c1d7b955cc7b26c0 (39/40) (21 seconds passed, remaining 0 predicted)    
+Ref 'refs/heads/master' was rewritten
 ```
