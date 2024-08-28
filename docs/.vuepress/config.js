@@ -198,6 +198,7 @@ export default defineUserConfig({
             "/advance/浏览器渲染原理.md",
             "/advance/浏览器的同源策略.md",
             "/advance/前端工程化流程.md",
+            "/advance/从零实现一个完整的 redux.md",
           ]
         }
       ]
