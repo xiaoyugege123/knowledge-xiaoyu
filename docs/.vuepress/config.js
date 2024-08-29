@@ -107,6 +107,7 @@ export default defineUserConfig({
             "/base/继承.md",
             "/base/拖拽.md",
             "/base/web前端开发-实用的JS技巧-杨小爱系列.md",
+            "/base/高级的小知识点系列.md",
           ],
         },
       ],

@@ -129,25 +129,59 @@ git filter-branch --commit-filter '
                 git commit-tree "$@";
         fi' HEAD
 ```
-下面相当于在重写.git文件夹
+
+下面相当于在重写.git 文件夹
+
 ```
 PS D:\web前端工程\WebDemo\React\happy-buy> git filter-branch --commit-filter '
->>         if [ "$GIT_AUTHOR_NAME" = "xiaoyugege123" ];  
+>>         if [ "$GIT_AUTHOR_NAME" = "xiaoyugege123" ];
 >>         then
->>                 GIT_AUTHOR_NAME="xiaoyu";    
+>>                 GIT_AUTHOR_NAME="xiaoyu";
 >>                 GIT_AUTHOR_EMAIL="luoyu2003@outlook.com";
 >>                 git commit-tree "$@";
 >>         else
 >>                 git commit-tree "$@";
 >>         fi' HEAD
-$@"\x3b\x0a        else\x0a                git commit-tree "$@"\x3b\x0a        fi' HEAD;a6c62303-8523-46d7-a161-ece3222db78dWARNING: git-filter-branch has a glut of gotchas generating mangled history  
-         rewrites.  Hit Ctrl-C before proceeding to abort, then use an       
+$@"\x3b\x0a        else\x0a                git commit-tree "$@"\x3b\x0a        fi' HEAD;a6c62303-8523-46d7-a161-ece3222db78dWARNING: git-filter-branch has a glut of gotchas generating mangled history
+         rewrites.  Hit Ctrl-C before proceeding to abort, then use an
          alternative filtering tool such as 'git filter-repo'
-         (https://github.com/newren/git-filter-repo/) instead.  See the      
+         (https://github.com/newren/git-filter-repo/) instead.  See the
          filter-branch manual page for more details; to squelch this warning,
          set FILTER_BRANCH_SQUELCH_WARNING=1.
 Proceeding with filter-branch...
 
-Rewrite 1159a0efac5311581fc69968c1d7b955cc7b26c0 (39/40) (21 seconds passed, remaining 0 predicted)    
+Rewrite 1159a0efac5311581fc69968c1d7b955cc7b26c0 (39/40) (21 seconds passed, remaining 0 predicted)
 Ref 'refs/heads/master' was rewritten
 ```
+
+## commit 规范
+
+1.  type
+
+        - feat: 新功能
+        - fix: 修复问题
+        - docs: 修改文档
+        - style: 修改代码格式，不影响代码逻辑
+        - refactor: 重构代码，理论上不影响现有功能
+        - perf: 提升性能
+        - test: 增加修改测试用例
+        - chore: 修改工具相关（包括但不限于文档、代码生成等）
+        - deps: 升级依赖
+
+2.  scope
+
+        - 修改文件的范围（包括但不限于 doc, middleware, proxy, core, config）
+
+3.  subject
+
+        - 用一句话清楚的描述这次提交做了什么
+
+4.  body
+
+        - 补充 subject，适当增加原因、目的等相关因素，也可不写。
+
+5.  footer
+
+        - 当有非兼容修改时可在这里描述清楚
+        - 关联相关 issue，如 Closes #1, Closes #2, #3
+        - 如果功能点有新增或修改的，还需要关联 chair-handbook 和 chair-init 的 MR，如 chair/doc!123
