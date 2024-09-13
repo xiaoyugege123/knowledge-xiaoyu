@@ -36,7 +36,8 @@ export default defineUserConfig({
               {text:"栈_堆🍊",link:"/algorithm/栈_堆🍊.md"},
               {text:"贪心🍉",link:"/algorithm/贪心🍉.md"},
               {text:"回溯算法🌽",link:"/algorithm/回溯算法🌽.md"},
-              {text:"哈希&&队列🏖️",link:"/algorithm/哈希&&队列🏖️.md"}
+              {text:"哈希&&队列🏖️",link:"/algorithm/哈希&&队列🏖️.md"},
+              {text:"哈希&&队列🏖️",link:"/algorithm/图论🎆.md"},
             ]
           },
           {
@@ -128,6 +129,7 @@ export default defineUserConfig({
             "/algorithm/栈_堆🍊.md",
             "/algorithm/回溯算法🌽.md",
             "/algorithm/哈希&&队列🏖️.md",
+            "/algorithm/图论🎆.md",
           ],
         },
       ],
