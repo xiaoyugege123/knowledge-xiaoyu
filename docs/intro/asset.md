@@ -23,3 +23,12 @@
 - [web前端面试 - 面试官系列](https://vue3js.cn/interview/)
 - [Vue 系列项目](https://vue3js.cn/)
 - [w3cschool-前端面试八股文](https://www.w3cschool.cn/web_interview/)
+
+### 我的个人分享
+- [小雨的语雀花园](https://www.yuque.com/u33219758)
+- [小雨的gitee地址](https://gitee.com/luoyuXiaogege)
+- [小雨的github地址](https://github.com/xiaoyugege123)
+- [小雨的CSDN](https://blog.csdn.net/m0_63231347?type=blog)
+- [牛客网-小雨](https://www.nowcoder.com/users/96647232/tests)
+- [小雨的个人网站](https://xiaoyugege123.com/)
+- [小雨的哔站大学](https://space.bilibili.com/531656549)
