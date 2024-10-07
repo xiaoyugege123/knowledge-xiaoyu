@@ -202,6 +202,7 @@ export default defineUserConfig({
             "/advance/浏览器的同源策略.md",
             "/advance/前端工程化流程.md",
             "/advance/从零实现一个完整的 redux.md",
+            "/advance/虚拟滚动列表.md",
           ]
         }
       ]
