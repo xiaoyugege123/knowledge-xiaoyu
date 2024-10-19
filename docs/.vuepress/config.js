@@ -3,8 +3,8 @@ import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress";
 import { copyCodePlugin } from "@vuepress/plugin-copy-code";
 import { searchPlugin } from "@vuepress/plugin-search";
-import { gitPlugin } from '@vuepress/plugin-git'
-import { readingTimePlugin } from '@vuepress/plugin-reading-time'
+import { gitPlugin } from "@vuepress/plugin-git";
+import { readingTimePlugin } from "@vuepress/plugin-reading-time";
 
 export default defineUserConfig({
   bundler: viteBundler(),
@@ -21,38 +21,42 @@ export default defineUserConfig({
       {
         text: "数据结构与算法",
         children: [
-          {text:'介绍',link:"/algorithm/README.md"},
-          {text:"手撕数据结构",link:"/algorithm/手撕数据结构.md"},
+          { text: "介绍", link: "/algorithm/README.md" },
+          { text: "手撕数据结构", link: "/algorithm/手撕数据结构.md" },
+          { text: "排序算法", link: "/algorithm/排序算法.md" },
           {
-            text:"LeetCode算法题",
-            children:[
-              {text:"二叉树🍈",link:"/algorithm/二叉树🍈.md"},
-              {text:"链表🍜",link:"/algorithm/链表🍜.md"},
-              {text:"双指针_滑动窗口🍨",link:"/algorithm/双指针_滑动窗口🍨.md"},
-              {text:"二分查找🍰",link:"/algorithm/二分查找🍰.md"},
-              {text:"动态规划🍓",link:"/algorithm/动态规划🍓.md"},
-              {text:"技巧_数学🍌",link:"/algorithm/技巧_数学🍌.md"},
-              {text:"矩阵🍇",link:"/algorithm/矩阵🍇.md"},
-              {text:"栈_堆🍊",link:"/algorithm/栈_堆🍊.md"},
-              {text:"贪心🍉",link:"/algorithm/贪心🍉.md"},
-              {text:"回溯算法🌽",link:"/algorithm/回溯算法🌽.md"},
-              {text:"哈希&&队列🏖️",link:"/algorithm/哈希&&队列🏖️.md"},
-              {text:"哈希&&队列🏖️",link:"/algorithm/图论🎆.md"},
-            ]
+            text: "LeetCode算法题",
+            children: [
+              { text: "二叉树🍈", link: "/algorithm/二叉树🍈.md" },
+              { text: "链表🍜", link: "/algorithm/链表🍜.md" },
+              {
+                text: "双指针_滑动窗口🍨",
+                link: "/algorithm/双指针_滑动窗口🍨.md",
+              },
+              { text: "二分查找🍰", link: "/algorithm/二分查找🍰.md" },
+              { text: "动态规划🍓", link: "/algorithm/动态规划🍓.md" },
+              { text: "技巧_数学🍌", link: "/algorithm/技巧_数学🍌.md" },
+              { text: "矩阵🍇", link: "/algorithm/矩阵🍇.md" },
+              { text: "栈_堆🍊", link: "/algorithm/栈_堆🍊.md" },
+              { text: "贪心🍉", link: "/algorithm/贪心🍉.md" },
+              { text: "回溯算法🌽", link: "/algorithm/回溯算法🌽.md" },
+              { text: "哈希&&队列🏖️", link: "/algorithm/哈希&&队列🏖️.md" },
+              { text: "哈希&&队列🏖️", link: "/algorithm/图论🎆.md" },
+            ],
           },
           {
-            text:"算法推荐学习网站",
-            children:[
-              {text:"hello算法",link:"https://www.hello-algo.com/"},
-              {text:"代码随想录",link:"https://www.programmercarl.com/"}
-            ]
-          }
+            text: "算法推荐学习网站",
+            children: [
+              { text: "hello算法", link: "https://www.hello-algo.com/" },
+              { text: "代码随想录", link: "https://www.programmercarl.com/" },
+            ],
+          },
         ],
       },
       {
         text: "计算机基础",
-        children:[
-          {text:"介绍",link:"/computer/README.md"},
+        children: [
+          { text: "介绍", link: "/computer/README.md" },
           "/computer/计算机网络.md",
           "/computer/Web应用安全.md",
           "/computer/设计模式.md",
@@ -60,13 +64,13 @@ export default defineUserConfig({
           "/computer/数据库.md",
           "/computer/操作系统_编译原理.md",
           {
-            text:"软件工程",
-            children:[
-              {text:"Git",link:"/computer/Git.md"},
-              {text:"NGINX",link:"/computer/NGINX.md"}
-            ]
+            text: "软件工程",
+            children: [
+              { text: "Git", link: "/computer/Git.md" },
+              { text: "NGINX", link: "/computer/NGINX.md" },
+            ],
           },
-        ]
+        ],
       },
       {
         text: "前端进阶",
@@ -118,6 +122,7 @@ export default defineUserConfig({
           children: [
             "/algorithm/README.md",
             "/algorithm/手撕数据结构.md",
+            "/algorithm/排序算法.md",
             "/algorithm/二叉树🍈.md",
             "/algorithm/链表🍜.md",
             "/algorithm/双指针_滑动窗口🍨.md",
@@ -146,6 +151,7 @@ export default defineUserConfig({
           text: "实习",
           children: [
             "/project/internship/数据安全.md",
+            "/project/internship/CR中常见的问题.md",
           ],
         },
       ],
@@ -165,10 +171,10 @@ export default defineUserConfig({
           ],
         },
       ],
-      "/computer/":[
+      "/computer/": [
         {
-          text:"计算机基础",
-          children:[
+          text: "计算机基础",
+          children: [
             "/computer/README.md",
             "/computer/计算机网络.md",
             "/computer/Web应用安全.md",
@@ -178,13 +184,13 @@ export default defineUserConfig({
             "/computer/操作系统_编译原理.md",
             "/computer/Git.md",
             "/computer/NGINX.md",
-          ]
-        }
+          ],
+        },
       ],
-      "/advance/":[
+      "/advance/": [
         {
-          text:"前端进阶",
-          children:[
+          text: "前端进阶",
+          children: [
             "/advance/README.md",
             "/advance/前端路由的实现原理.md",
             "/advance/数据代理Proxy.md",
@@ -203,12 +209,12 @@ export default defineUserConfig({
             "/advance/前端工程化流程.md",
             "/advance/从零实现一个完整的 redux.md",
             "/advance/虚拟滚动列表.md",
-          ]
-        }
-      ]
+          ],
+        },
+      ],
     },
   }),
-  lang:"zh-CN",
+  lang: "zh-CN",
   title: "🍰 小雨的学习记录",
   description:
     "在互联网的广阔天地，深知技术日新月异，不进则退，对前端开发的热爱，源于对生活持续学习、不断进步的态度",
@@ -221,23 +227,23 @@ export default defineUserConfig({
       // options
     }),
     searchPlugin({
-      locales: {//搜索框在不同 locales 下的文字
+      locales: {
+        //搜索框在不同 locales 下的文字
         "/": {
           placeholder: "搜索",
         },
       },
-      maxSuggestions:10,//指定搜索结果的最大条数
+      maxSuggestions: 10, //指定搜索结果的最大条数
     }),
     gitPlugin({
       // 配置项
       createdTime: true,
       updatedTime: true,
-      contributors:true,
+      contributors: true,
     }),
     readingTimePlugin({
       // 配置项
-      wordPerMinute:300
+      wordPerMinute: 300,
     }),
   ],
 });
-  
